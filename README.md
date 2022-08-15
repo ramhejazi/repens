@@ -3,7 +3,7 @@ A simple terminal logger for node.
 **repens** uses **chalk** library for colorifying log levels. 
 
 ## Installation 
-> npm i repens
+> $ npm i repens
 
 ## Usage
 The package exports an object. In order to create a logger one needs to call the `spawn` method of the exported object. 
