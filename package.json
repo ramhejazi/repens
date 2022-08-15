@@ -1,0 +1,34 @@
+{
+  "name": "repens",
+  "version": "1.0.0",
+  "description": "a simple terminal logger for node.js",
+  "main": "repens.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha.js test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramhejazi/repens.git"
+  },
+  "keywords": [
+    "log",
+    "terminal",
+    "spawn"
+  ],
+  "author": "Ram Hejazi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ramhejazi/repens/issues"
+  },
+  "homepage": "https://github.com/ramhejazi/repens#readme",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  },
+  "dependencies": {
+    "chalk": "4.1.2"
+  }
+}
