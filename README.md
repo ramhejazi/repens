@@ -1,9 +1,11 @@
-# Repens
-A simple terminal logger for node.
-**repens** uses **chalk** library for colorifying log levels. 
+# repens
+A simple logger for node. repens uses chalk library for colorizing log levels. 
 
 ## Installation 
-> $ npm i repens
+
+```bash
+$ npm i repens
+```
 
 ## Usage
 The package exports an object. In order to create a logger one needs to call the `spawn` method of the exported object. 
@@ -11,7 +13,7 @@ The returned object of the `spawn` call also has the `spawn` method which can be
 in other words, loggers can be created recursively.
 
 ``` javascript
-const repens = require('./repens');
+const repens = require('repens');
 const app_logger = repens.spawn('app');
 const db_logger = app_logger.spawn('db');
 
@@ -19,6 +21,8 @@ app_logger.info('app is running on port 5800');
 // [05:41:35][app] app is running on port 5800
 db_logger.warn('db is running on port 5801');
 // [05:41:35][app][db] db on running in port 5801
+app_logger.spawn('foo').spawn('bar').log('...');
+// [05:41:35][app][foo][bar] ...
 ```
 
 ## Loggers
